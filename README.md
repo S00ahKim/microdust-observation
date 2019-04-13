@@ -14,4 +14,6 @@
 ##### 19-04-13
 
 - [x] favicon
-- [x] actions/index.js
+- [x] actions/index.js ++
+- [x] containers/search_bar.js ++
+- [x] containers/station_list.js ++
