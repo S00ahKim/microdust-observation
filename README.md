@@ -14,3 +14,4 @@
 ##### 19-04-13
 
 - [x] favicon
+- [x] actions/index.js
