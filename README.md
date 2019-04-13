@@ -10,3 +10,7 @@
 ##### 19-04-03
 
 - [x] create react app
+
+##### 19-04-13
+
+- [x] favicon
