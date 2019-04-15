@@ -17,3 +17,9 @@
 - [x] actions/index.js ++
 - [x] containers/search_bar.js ++
 - [x] containers/station_list.js ++
+
+##### 19-04-15
+
+- [x] App에서 화면 전환 (main, detail로 페이지 구분)
+- [x] station_list.js, search_bar.js components로 이동, ++
+- [x] title component ++

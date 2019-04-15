@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
 
-import SearchBar from './containers/search_bar';
-import StationList from './containers/station_list';
+import Main from './containers/main';
+import Detail from './containers/detail';
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <StationList />
+        <Switch>
+          <Route exact path = '/' component = {Main}/>
+          <Route path = '/:id' component = {Detail}/>
+        </Switch>
       </div>
     );
   }

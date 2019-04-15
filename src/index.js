@@ -17,7 +17,7 @@ ReactDOM.render(
     <Provider store={composeStoreWithMiddleware(reducers)}>
         <App />
     </Provider>
-), document.getElementById('root'));
+, document.getElementById('root'));
 
 // app to work offline and load faster
 serviceWorker.register();
