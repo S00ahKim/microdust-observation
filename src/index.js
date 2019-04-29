@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import promiseMiddleware from 'redux-promise-middleware';
+import { createPromise } from 'redux-promise-middleware';
 
 import './index.css';
 import App from './App';
@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 import reducers from './reducers';
 
 const composeStoreWithMiddleware = applyMiddleware(
-    promiseMiddleware()
+    createPromise({}),
   )(createStore);
 
 ReactDOM.render(
@@ -20,4 +20,4 @@ ReactDOM.render(
 , document.getElementById('root'));
 
 // app to work offline and load faster
-serviceWorker.register();
+serviceWorker.unregister();

@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import Title from '../components/title';
+import Map from '../components/map';
 import DetailView from '../components/detail_view';
+import Widget from '../components/widget';
 
-//- TODO: 타이틀 스몰 부분에서 글자 작아지게 css
+//- 이거 수정 필요
+
 class Detail extends Component {
     render() {
-        <div className='detail'>
-            <div className = 'title-small'> 
-                <Title />
+        return (
+            <div className='detail'>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> <Widget /> </td>
+                            <td> <DetailView /> </td>
+                        </tr>
+                        <tr>
+                            <td> <Map /> </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div className = 'detail-view'>
-                <DetailView />
-            </div>
-        </div>
+        )
     }
 }
 
