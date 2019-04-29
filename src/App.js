@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Title from './containers/title';
-import SearchBar from './containers/search_bar';
 import CityList from './containers/city_list';
 import Detail from './containers/detail';
 
@@ -12,7 +11,6 @@ class App extends Component {
     return (
       <div>
         <Title />
-        <SearchBar />
         <CityList />
         <Detail />
       </div>

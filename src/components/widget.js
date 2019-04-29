@@ -6,7 +6,7 @@ import React from 'react';
 const Widget = (props) => {
     return (
         <div>
-            <small>{props.cityname} 대기 정보:</small> 
+            <small>{props.cityname} 대기 정보</small> 
             <div>
                 {props.aqiv}
             </div> 

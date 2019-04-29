@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Map from '../components/map';
 import DetailView from '../components/detail_view';
 import Widget from '../components/widget';
 
@@ -9,14 +8,11 @@ class Detail extends Component {
     render() {
         return (
             <div className='detail'>
-                <table>
+                <table className = 'table'>
                     <tbody>
                         <tr>
                             <td> <Widget /> </td>
                             <td> <DetailView /> </td>
-                        </tr>
-                        <tr>
-                            <td> <Map /> </td>
                         </tr>
                     </tbody>
                 </table>

@@ -4,14 +4,21 @@ class CityList extends Component {
     render (){
         return (
             <div className ='city-list'>
-                <table className ='table table-hover'>
+                <table className ='table'>
                     <tbody>
                         <tr>
-                            <td> 서울특별시 </td>
-                            <td> 부산광역시 </td>
-                            <td> 인천광역시 </td>
-                            <td> 대구광역시 </td>
-                            <td> 대전광역시 </td>
+                            <td> 서울 </td>
+                            <td> 부산 </td>
+                            <td> 인천 </td>
+                            <td> 대구 </td>
+                            <td> 대전 </td>
+                        </tr>
+                        <tr>
+                            <td> 광주 </td>
+                            <td> 수원 </td>
+                            <td> 울산 </td>
+                            <td> 창원 </td>
+                            <td> 고양 </td>
                         </tr>
                     </tbody>
                 </table>
