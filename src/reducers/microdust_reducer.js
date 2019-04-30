@@ -12,11 +12,20 @@ export default function(state = {
         data: [...state.data]
       };
     case `${FETCH_CITY}_FULFILLED`:
-      return {
-        loading: false,
-        error: '',
-        data: [action.payload.data, ...state.data]
-      };
+      if (action.payload.data.status === "error") {
+        return {
+          loading: false,
+          error: '존재하지 않는 이름입니다.',
+          data: [...state.data]
+        };
+      }
+      else {
+        return {
+          loading: false,
+          error: '',
+          data: [action.payload.data, ...state.data]
+        };
+      }
     case `${FETCH_CITY}_REJECTED`:
       return {
         loading: false,
@@ -28,4 +37,4 @@ export default function(state = {
     }
   }
   
-  
+  //- 리젝티드로 안들어옴

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Title = () => {
   return (
-    <p className = 'title'> 주요도시 미세먼지 </p>
+    <p className = 'title'> 미세먼지 </p>
   );
 };
 

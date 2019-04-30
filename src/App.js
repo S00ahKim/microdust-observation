@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Title from './containers/title';
-import CityList from './containers/city_list';
+import SearchBar from './containers/search_bar';
 import Detail from './containers/detail';
 
 import './App.css';
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <Title />
-        <CityList />
+        <SearchBar />
         <Detail />
       </div>
     );
