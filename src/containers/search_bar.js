@@ -28,9 +28,11 @@ class SearchBar extends Component {
     }
 
     render() {
-        const clsName = (this.props.loading) ? 'btn btn-primary loading' : 'btn btn-primary';
+        const clsName = (this.props.loading) ? 'btn btn-danger loading' : 'btn btn-danger';
         return (
-            <Navbar bg="light" expand="md">
+            <Navbar bg='default' expand="md">
+                <Navbar.Brand>미세린가이드</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link onClick={event => this.setState({term: 'seoul'})}> 서울 </Nav.Link>
@@ -46,7 +48,6 @@ class SearchBar extends Component {
                             <NavDropdown.Item onClick={event => this.setState({term: 'changwon'})}> 창원 </NavDropdown.Item>
                             <NavDropdown.Item onClick={event => this.setState({term: 'goyang'})}> 고양 </NavDropdown.Item>
                         </NavDropdown>
-                        &nbsp;
                         <NavDropdown title="해외주요도시" id="basic-nav-dropdown">
                             <NavDropdown.Item onClick={event => this.setState({term: 'beijing'})}> 베이징 </NavDropdown.Item>
                             <NavDropdown.Item onClick={event => this.setState({term: 'tokyo'})}> 도쿄 </NavDropdown.Item>

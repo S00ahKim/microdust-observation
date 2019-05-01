@@ -1,4 +1,9 @@
+html {
+  background-color: brown;
+}
+
 body {
+  background-color: white;
   margin: 2em;
   padding: 2em;
   font-family: sans-serif;

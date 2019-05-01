@@ -1,6 +1,13 @@
 .title {
   text-align: center;
+  font-style: oblique;
   font-size: 4em;
+  font-weight: bold;
+  color: brown;
+}
+
+.navbar {
+  font-weight: bold;
 }
 
 .city-list {
@@ -18,4 +25,16 @@
 
 .map{
   height: 380px;
+}
+
+.needBold {
+  font-weight: bold;
+}
+
+.carousel {
+  text-align: center;
+}
+
+.c-item {
+  padding: 1em;
 }
