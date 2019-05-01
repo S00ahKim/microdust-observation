@@ -7,6 +7,15 @@
   text-align: center;
 }
 
-.detail {
+.log {
   text-align: center;
+}
+
+.log-msg {
+  text-align: left;
+  text-emphasis: 1em;
+}
+
+.map{
+  height: 380px;
 }

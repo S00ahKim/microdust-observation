@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Title from './containers/title';
 import SearchBar from './containers/search_bar';
-import Detail from './containers/detail';
+import Log from './containers/log';
+import Status from './containers/status';
 
 import './App.css';
 
@@ -12,7 +13,8 @@ class App extends Component {
       <div>
         <Title />
         <SearchBar />
-        <Detail />
+        <Status />
+        <Log />
       </div>
     );
   }

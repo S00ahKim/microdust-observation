@@ -29,7 +29,7 @@ export default function(state = {
     case `${FETCH_CITY}_REJECTED`:
       return {
         loading: false,
-        error: action.payload,
+        error: '연결이 거부되었습니다.',
         data: [...state.data]
       };
     default:

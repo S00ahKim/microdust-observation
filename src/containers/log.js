@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-//import Widget from '../components/widget';
-
-//- 이거 수정 필요 저기 타이틀 example이게 props 근데 이걸 싹 바꾸고 싶다 = state
-//- 디테일뷰를 렌더디테일로
-//- 키.........
-
-class Detail extends Component {
-    renderDetail(data){
+class Log extends Component {
+    renderLog(data){
         const cityname = data.data.city.name;
         const pm10 = data.data.iaqi.pm10.v;
         const pm25 = data.data.iaqi.pm25.v;
         const co = data.data.iaqi.co.v;
         const o3 = data.data.iaqi.o3.v;
         const obs_time = data.data.time.s;
-        return (
+        return ( 
             <tr> 
                 <td> {cityname} </td>
                 <td> {pm10} </td>
@@ -39,7 +33,7 @@ class Detail extends Component {
 
     render() {
         return (
-            <div className='detail'>
+            <div className='log'>
                 { this.handleError() }
                 <table className='table'>
                     <thead>
@@ -53,7 +47,7 @@ class Detail extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.mdust.map(this.renderDetail)}
+                        {this.props.mdust.map(this.renderLog)}
                     </tbody>
                 </table>
             </div>
@@ -69,4 +63,4 @@ function mapStateToProps(state) {
     };
   }
   
-export default connect(mapStateToProps)(Detail);
+export default connect(mapStateToProps)(Log);
