@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Title from './containers/title';
 import SearchBar from './containers/search_bar';
 import Log from './containers/log';
-import Status from './containers/status';
 import Visual from './containers/visual';
+import ControlledCarousel from './components/carousel'
 
 import './App.css';
 
@@ -14,8 +14,8 @@ class App extends Component {
       <div>
         <Title />
         <SearchBar />
+        <ControlledCarousel />
         <Visual />
-        <Status />
         <Log />
       </div>
     );

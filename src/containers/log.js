@@ -10,7 +10,7 @@ class Log extends Component {
         const o3 = data.data.iaqi.o3.v;
         const obs_time = data.data.time.s;
         return ( 
-            <tr> 
+            <tr key={cityname.id}> 
                 <td> {cityname} </td>
                 <td> {pm10} </td>
                 <td> {pm25} </td>
@@ -20,35 +20,19 @@ class Log extends Component {
             </tr>
         )
     }
-
-    handleError() {
-        if (this.props.error) {
-          return (
-            <div className="alert alert-danger" role="alert">
-              {this.props.error}
-            </div>
-          );
-        }
-    }
-
     render() {
         return (
             <div className='log'>
-                { this.handleError() }
                 <table className='table'>
-                    <thead>
-                        <tr>
-                            <th> 도시 </th>
-                            <th> 미세먼지 </th>
-                            <th> 초미세먼지 </th>
-                            <th> 일산화탄소 </th>
-                            <th> 오존 </th>
-                            <th> 측정 시각 </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.props.mdust.map(this.renderLog)}
-                    </tbody>
+                    <tr>
+                        <td> 도시 </td>
+                        <td> 미세먼지 </td>
+                        <td> 초미세먼지 </td>
+                        <td> 일산화탄소 </td>
+                        <td> 오존 </td>
+                        <td> 측정 시각 </td>
+                    </tr>
+                    {this.props.mdust.map(this.renderLog)}
                 </table>
             </div>
         )

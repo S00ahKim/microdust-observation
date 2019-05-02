@@ -6,12 +6,55 @@
   color: brown;
 }
 
+.root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navbar {
   font-weight: bold;
 }
 
 .city-list {
   text-align: center;
+}
+
+#status-view {
+  padding: 20px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+}
+
+#face-view {
+  padding: 25px;
+  justify-content: center;
+}
+
+#status-detail-view {
+  padding:30px;
+  justify-content: center;
+}
+
+.face {
+  height: 14em;
+  justify-content: center;
+}
+
+.star-rate {
+  height: 3em;
+  max-width: 100%;
+  justify-content: center;
+}
+
+#stat-string {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#meaning {
+  text-align: justify;
 }
 
 .log {
@@ -23,8 +66,14 @@
   text-emphasis: 1em;
 }
 
-.map{
-  height: 380px;
+.logo-character {
+  height: 1.25em;
+}
+
+.logo {
+  width: 35%;
+  max-width: 70%;
+  height: auto;
 }
 
 .needBold {
@@ -32,9 +81,10 @@
 }
 
 .carousel {
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .c-item {
   padding: 1em;
+  text-align: center;
 }

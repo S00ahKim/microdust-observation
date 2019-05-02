@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ControlledCarousel from '../components/carousel'
+import GoogleMap from '../components/google_map';
+import Status from '../components/status';
 
 class Visual extends Component {
     renderVisual(data){
-        const cityname = data.data.city.name;
-        const pm10 = data.data.iaqi.pm10.v;
+
+        const lat = data.data.city.geo[0];
+        const lng = data.data.city.geo[1];
+
+        console.log(data, lat, lng)
+
         return ( 
-            <tr> 
-                <td> {cityname} </td>
-                <td> {pm10} </td>
-            </tr>
+            <div className='row' id='visual-box'>
+                <div className='col'> <GoogleMap lat={lat} lng={lng} /> </div>
+                <div className='col'> <Status /></div>
+            </div>
         )
     }
-
     handleError() {
         if (this.props.error) {
           return (
@@ -28,18 +32,7 @@ class Visual extends Component {
         return (
             <div className='visual'>
                 { this.handleError() }
-                <ControlledCarousel />
-                <table className='table'>
-                    <thead>
-                        <tr>
-                            <th> 측정소 위치 </th>
-                            <th> 미세먼지 </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.props.mdust.map(this.renderVisual)}
-                    </tbody>
-                </table>
+                {this.props.mdust.map(this.renderVisual)}
             </div>
         )
     }
@@ -47,7 +40,7 @@ class Visual extends Component {
 
 function mapStateToProps(state) {
     return { 
-      mdust: state.mdust.ldata,  
+      mdust: state.mdust.ldata,
       error: state.mdust.error
     };
   }
