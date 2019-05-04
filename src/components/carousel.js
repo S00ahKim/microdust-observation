@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import NowKorea from './now_korea';
+
 
 class ControlledCarousel extends React.Component {
   constructor(props, context) {
@@ -22,13 +24,15 @@ class ControlledCarousel extends React.Component {
 
   render() {
     const { index, direction } = this.state;
-
     return (
         <Carousel
             activeIndex={index}
             direction={direction}
             onSelect={this.handleSelect}
             className = 'carousel'>
+            <Carousel.Item>
+                <NowKorea />
+            </Carousel.Item>
             <Carousel.Item>
                 <p className='c-item'> 미세먼지 농도가 높을 때, 외출은 가급적 자제하세요. 대기오염이 심한 도로변과 공사장은 피하고, 대중교통을 이용하세요.</p>
             </Carousel.Item>
@@ -42,5 +46,4 @@ class ControlledCarousel extends React.Component {
     );
   }
 }
-
 export default ControlledCarousel;

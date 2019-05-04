@@ -42,4 +42,4 @@ export default function(state = {
     }
   }
   
-  //- 리젝티드로 안들어옴
+  //- 리젝티드로 안들어와서 따로 해옴

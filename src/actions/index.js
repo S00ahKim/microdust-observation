@@ -16,6 +16,7 @@ export function fetchCity(city){
     }
 }
 
+
 //- 지역 이름을 받아서 정보를 가져옴
 // //- 받게 되는 예시: 
 // {
