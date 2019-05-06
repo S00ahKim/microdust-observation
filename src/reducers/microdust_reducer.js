@@ -1,6 +1,8 @@
 import { FETCH_CITY } from '../actions';
 
 //ldata: latest data
+//rejected로 들어오지 않아서 if 문으로 분리함
+
 export default function(state = {  
     loading: false, error: '', data: [], ldata: []
   }, action) {
@@ -41,5 +43,3 @@ export default function(state = {
       return state;
     }
   }
-  
-  //- 리젝티드로 안들어와서 따로 해옴

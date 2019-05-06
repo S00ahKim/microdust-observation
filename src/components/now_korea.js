@@ -4,15 +4,15 @@ import axios from'axios';
 class NowKorea extends Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
-          error: 'null', 
-          seD: [], 
-          buD: [], 
-          dgD: [], 
-          inD: [], 
-          gwD: []
-        };
+            error: 'null', 
+            seD: [], 
+            buD: [], 
+            dgD: [], 
+            inD: [], 
+            gwD: []
+          };
     }
 
     componentDidMount(){

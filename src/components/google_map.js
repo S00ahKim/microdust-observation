@@ -1,6 +1,4 @@
-/*global google*/
-//- 참고: https://velopert.com/3631
-
+/*global google */
 import React, { Component } from 'react';
 
 class GoogleMap extends Component {
@@ -19,11 +17,13 @@ class GoogleMap extends Component {
     });
   }
 
-  shouldComponentUpdate(){ //- 변화를 감지해준다.
+  shouldComponentUpdate(){ 
+    //- 변화를 감지해준다.
     return true;
   }
 
-  componentWillUpdate(nextProps, nextState){ //- 이부분으로 계속 업데이트해준다.
+  componentWillUpdate(nextProps, nextState){ 
+    //- 이부분으로 계속 업데이트해준다.
     new google.maps.Map(this.map.current, {
       zoom: 12,
       center: {
@@ -33,8 +33,8 @@ class GoogleMap extends Component {
     });
   }
 
-  componentDidUpdate(prevProps, prevState, snapshot) { //- 이 API는 컴포넌트에서 render() 를 호출하고난 다음에 발생. this.props바뀌어있음.
-
+  componentDidUpdate(prevProps, prevState, snapshot) { 
+    //- 이 API는 컴포넌트에서 render() 를 호출하고난 다음에 발생. this.props바뀌어있음.
   }
 
   render() {
