@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Status extends Component {
     renderStatus(data){
-        const pm25 = data.data.iaqi.pm25.v;
+        const pm25 = data.data.aqi;
 
         if (pm25 < 51) {
             var img = <img className='face' src={require('./img-component/st1.png')} />
